@@ -3,7 +3,7 @@ import "../styles/App.css";
 
 class App extends Component {
   render() {
-    const cities = [
+    let cities = [
       "Goa",
       "Amsterdam",
       "New York",
@@ -13,13 +13,11 @@ class App extends Component {
     ];
 
     return (
-      <>
-        <ol>
-          {cities.map((city, index) => (
-            <li key={`location${index + 1}`}>{city}</li>
-          ))}
-        </ol>
-      </>
+      <ol>
+        {cities.map((city, index) => (
+          <li key={`location${index + 1}`}>{city}</li>
+        ))}
+      </ol>
     );
   }
 }
